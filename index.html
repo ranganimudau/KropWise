@@ -6,59 +6,17 @@
     <title>KropWise - Smart Farming Solutions</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        .hero-gradient {
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-        }
-        .feature-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-        }
-        .testimonial-card {
-            background: linear-gradient(to bottom right, #f8f9fa, #e9ecef);
-        }
-        .upload-area {
-            border: 2px dashed #4CAF50;
-            transition: all 0.3s ease;
-        }
-        .upload-area:hover {
-            background-color: rgba(76, 175, 80, 0.05);
-        }
-        .nav-link {
-            position: relative;
-        }
-        .nav-link:after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: 0;
-            left: 0;
-            background-color: #4CAF50;
-            transition: width 0.3s ease;
-        }
-        .nav-link:hover:after {
-            width: 100%;
-        }
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
-        }
-        .pulse-animation {
-            animation: pulse 2s infinite;
-        }
-    </style>
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body class="font-sans antialiased text-gray-800">
-    <!-- Navigation -->
+    <!-- ===== NAVIGATION ===== -->
     <nav class="bg-white shadow-md sticky top-0 z-50">
-        <div class="container mx-auto px-4 py-4 flex justify-between items-center"> <!-- Increased padding-y to py-4 -->
-            <div class="flex items-center space-x-4"> <!-- Increased spacing to space-x-4 -->
-                <img src="/KropWise.jpg" 
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <img src="assets/images/KropWise.jpg" 
                      alt="KropWise Logo" 
-                     class="h-16 w-auto transform transition duration-300 hover:scale-105"> <!-- Increased size to h-16, added hover effect -->
-                <span class="text-2xl font-bold text-green-800 hidden md:block">KropWise</span> <!-- Larger text and hide on mobile -->
+                     class="h-16 w-auto transform transition duration-300 hover:scale-105">
+                <span class="text-2xl font-bold text-green-800 hidden md:block">KropWise</span>
             </div>
             <div class="hidden md:flex space-x-8">
                 <a href="#home" class="nav-link text-gray-700 hover:text-green-600">Home</a>
@@ -83,12 +41,12 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- ===== HERO SECTION ===== -->
     <section id="home" class="hero-gradient py-20">
         <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
             <div class="md:w-1/2 mb-10 md:mb-0">
-                <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">Smart Farming Made Simple with <span class="text-green-600">KropWise</span></h1>
-                <p class="text-lg text-gray-600 mb-8">Harness the power of AI to detect crop diseases, get personalized recommendations, and improve your yields with our easy-to-use farming assistant.</p>
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">Transforming Agriculture <span class="text-green-600">One Scan At A Time</span></h1>
+                <p class="text-lg text-gray-600 mb-8">Harness the power of AI to detect crop diseases, get personalized recommendations, and improve your yields with our easy-to-use disease-detection assistant.</p>
                 <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
                     <a href="#how-it-works" class="bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition duration-300 text-center">
                         Learn How It Works <i class="fas fa-arrow-right ml-2"></i>
@@ -104,7 +62,7 @@
         </div>
     </section>
 
-    <!-- How It Works Section -->
+    <!-- ===== HOW IT WORKS SECTION ===== -->
     <section id="how-it-works" class="py-16 bg-gray-50">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-center text-gray-800 mb-4">How KropWise Works</h2>
@@ -150,7 +108,7 @@
         </div>
     </section>
 
-    <!-- Features Section -->
+    <!-- ===== FEATURES SECTION ===== -->
     <section id="features" class="py-16 bg-white">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-center text-gray-800 mb-4">Powerful Features</h2>
@@ -214,7 +172,7 @@
         </div>
     </section>
 
-    <!-- Testimonials Section -->
+    <!-- ===== TESTIMONIALS SECTION ===== -->
     <section class="py-16 bg-gray-100">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-center text-gray-800 mb-4">Farmer Success Stories</h2>
@@ -281,7 +239,7 @@
         </div>
     </section>
 
-    <!-- About Us Section -->
+    <!-- ===== ABOUT US SECTION ===== -->
     <section id="about" class="py-16 bg-white">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-center text-gray-800 mb-4">About KropWise</h2>
@@ -335,7 +293,7 @@
         </div>
     </section>
 
-    <!-- Download App Section -->
+    <!-- ===== DOWNLOAD APP SECTION ===== -->
     <section class="py-16 bg-green-600 text-white">
         <div class="container mx-auto px-4 text-center">
             <h2 class="text-3xl font-bold mb-6">Download Our Mobile App</h2>
@@ -371,7 +329,7 @@
         </div>
     </section>
 
-    <!-- Contact Us Section -->
+    <!-- ===== CONTACT SECTION ===== -->
     <section id="contact" class="py-16 bg-gray-50">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-center text-gray-800 mb-4">Contact Us</h2>
@@ -467,7 +425,7 @@
         </div>
     </section>
 
-    <!-- FAQ Section -->
+    <!-- ===== FAQ SECTION ===== -->
     <section class="py-16 bg-white">
         <div class="container mx-auto px-4 max-w-4xl">
             <h2 class="text-3xl font-bold text-center text-gray-800 mb-4">Frequently Asked Questions</h2>
@@ -532,7 +490,7 @@
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- ===== FOOTER ===== -->
     <footer class="bg-gray-800 text-white py-12">
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -598,47 +556,6 @@
         </div>
     </footer>
 
-    <script>
-        // Mobile menu toggle
-        document.getElementById('menu-toggle').addEventListener('click', function() {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
-        });
-
-        // FAQ toggle functionality
-        document.querySelectorAll('.faq-toggle').forEach(button => {
-            button.addEventListener('click', () => {
-                const content = button.nextElementSibling;
-                const icon = button.querySelector('i');
-                
-                content.classList.toggle('hidden');
-                icon.classList.toggle('transform');
-                icon.classList.toggle('rotate-180');
-            });
-        });
-
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                    
-                    // Close mobile menu if open
-                    const mobileMenu = document.getElementById('mobile-menu');
-                    if (!mobileMenu.classList.contains('hidden')) {
-                        mobileMenu.classList.add('hidden');
-                    }
-                }
-            });
-        });
-    </script>
+    <script src="js/main.js"></script>
 </body>
 </html>
