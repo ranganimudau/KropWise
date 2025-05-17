@@ -3,62 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KropWise - Smart Farming Solutions</title>
+    <title>KropWise</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        .hero-gradient {
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-        }
-        .feature-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-        }
-        .testimonial-card {
-            background: linear-gradient(to bottom right, #f8f9fa, #e9ecef);
-        }
-        .upload-area {
-            border: 2px dashed #4CAF50;
-            transition: all 0.3s ease;
-        }
-        .upload-area:hover {
-            background-color: rgba(76, 175, 80, 0.05);
-        }
-        .nav-link {
-            position: relative;
-        }
-        .nav-link:after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: 0;
-            left: 0;
-            background-color: #4CAF50;
-            transition: width 0.3s ease;
-        }
-        .nav-link:hover:after {
-            width: 100%;
-        }
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
-        }
-        .pulse-animation {
-            animation: pulse 2s infinite;
-        }
-    </style>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
 </head>
 <body class="font-sans antialiased text-gray-800">
-    <!-- Navigation -->
+    <!-- ===== NAVIGATION ===== -->
     <nav class="bg-white shadow-md sticky top-0 z-50">
-        <div class="container mx-auto px-4 py-4 flex justify-between items-center"> <!-- Increased padding-y to py-4 -->
-            <div class="flex items-center space-x-4"> <!-- Increased spacing to space-x-4 -->
-                <img src="/KropWise.jpg" 
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <img src="assets/images/KropWise.jpg" 
                      alt="KropWise Logo" 
-                     class="h-16 w-auto transform transition duration-300 hover:scale-105"> <!-- Increased size to h-16, added hover effect -->
-                <span class="text-2xl font-bold text-green-800 hidden md:block">KropWise</span> <!-- Larger text and hide on mobile -->
+                     class="h-16 w-auto transform transition duration-300 hover:scale-105">
+                <span class="text-2xl font-bold text-green-800 hidden md:block">KropWise</span>
             </div>
             <div class="hidden md:flex space-x-8">
                 <a href="#home" class="nav-link text-gray-700 hover:text-green-600">Home</a>
@@ -83,12 +42,12 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- ===== HERO SECTION ===== -->
     <section id="home" class="hero-gradient py-20">
         <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
             <div class="md:w-1/2 mb-10 md:mb-0">
-                <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">Smart Farming Made Simple with <span class="text-green-600">KropWise</span></h1>
-                <p class="text-lg text-gray-600 mb-8">Harness the power of AI to detect crop diseases, get personalized recommendations, and improve your yields with our easy-to-use farming assistant.</p>
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">Transforming Agriculture <span class="text-green-600">One Scan At A Time</span></h1>
+                <p class="text-lg text-gray-600 mb-8">Harness the power of AI to detect crop diseases, get personalized recommendations, and improve your yields with our easy-to-use disease-detection assistant.</p>
                 <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
                     <a href="#how-it-works" class="bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition duration-300 text-center">
                         Learn How It Works <i class="fas fa-arrow-right ml-2"></i>
@@ -104,7 +63,7 @@
         </div>
     </section>
 
-    <!-- How It Works Section -->
+    <!-- ===== HOW IT WORKS SECTION ===== -->
     <section id="how-it-works" class="py-16 bg-gray-50">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-center text-gray-800 mb-4">How KropWise Works</h2>
@@ -150,7 +109,7 @@
         </div>
     </section>
 
-    <!-- Features Section -->
+    <!-- ===== FEATURES SECTION ===== -->
     <section id="features" class="py-16 bg-white">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-center text-gray-800 mb-4">Powerful Features</h2>
@@ -214,7 +173,7 @@
         </div>
     </section>
 
-    <!-- Testimonials Section -->
+    <!-- ===== TESTIMONIALS SECTION ===== -->
     <section class="py-16 bg-gray-100">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-center text-gray-800 mb-4">Farmer Success Stories</h2>
@@ -224,9 +183,9 @@
                 <!-- Testimonial 1 -->
                 <div class="testimonial-card p-6 rounded-lg">
                     <div class="flex items-center mb-4">
-                        <img src="https://images.unsplash.com/photo-1560253096-9631a6ad96c1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Farmer" class="w-12 h-12 rounded-full object-cover mr-4">
+    
                         <div>
-                            <h4 class="font-semibold">Thabo Mbeki</h4>
+                            <h4 class="font-semibold">Mamotaung Mafu</h4>
                             <p class="text-sm text-gray-500">Maize Farmer, Limpopo</p>
                         </div>
                     </div>
@@ -243,7 +202,7 @@
                 <!-- Testimonial 2 -->
                 <div class="testimonial-card p-6 rounded-lg">
                     <div class="flex items-center mb-4">
-                        <img src="https://images.unsplash.com/photo-1580894732444-8ecded7900cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Farmer" class="w-12 h-12 rounded-full object-cover mr-4">
+                        
                         <div>
                             <h4 class="font-semibold">Nomsa Dlamini</h4>
                             <p class="text-sm text-gray-500">Vegetable Farmer, KwaZulu-Natal</p>
@@ -262,9 +221,9 @@
                 <!-- Testimonial 3 -->
                 <div class="testimonial-card p-6 rounded-lg">
                     <div class="flex items-center mb-4">
-                        <img src="https://images.unsplash.com/photo-1551836022-d5d44eef8da2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Farmer" class="w-12 h-12 rounded-full object-cover mr-4">
+        
                         <div>
-                            <h4 class="font-semibold">Jacob Zuma</h4>
+                            <h4 class="font-semibold">Thabo Mokwena</h4>
                             <p class="text-sm text-gray-500">Citrus Farmer, Eastern Cape</p>
                         </div>
                     </div>
@@ -281,7 +240,7 @@
         </div>
     </section>
 
-    <!-- About Us Section -->
+    <!-- ===== ABOUT US SECTION ===== -->
     <section id="about" class="py-16 bg-white">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-center text-gray-800 mb-4">About KropWise</h2>
@@ -291,16 +250,18 @@
                 <div class="lg:w-1/2 mb-8 lg:mb-0 lg:pr-12">
                     <h3 class="text-2xl font-semibold mb-4">Our Mission</h3>
                     <p class="text-gray-600 mb-4">At KropWise, we believe that every farmer deserves access to affordable, accurate agricultural advice. Our mission is to democratize agricultural expertise through artificial intelligence, making professional-grade crop analysis available to farmers of all scales.</p>
-                    <p class="text-gray-600">We're committed to sustainable farming practices and helping farmers maximize their yields while minimizing environmental impact.</p>
+                    <p class="text-gray-600">We're committed to sustainable farming practices and helping farmers maximize their yields while increasing food security by reducing wastage.</p>
                 </div>
                 <div class="lg:w-1/2">
                     <img src="https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Farmers discussing" class="rounded-lg shadow-lg w-full">
                 </div>
             </div>
             
-            <h3 class="text-2xl font-semibold text-center mb-8">Meet The Team</h3>
+            
+            <!--<h3 class="text-2xl font-semibold text-center mb-8">Meet The Team</h3> -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Team Member 1 -->
+                     <!-- 
+                Team Member 1
                 <div class="bg-gray-50 p-6 rounded-lg text-center">
                     <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Team member" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
                     <h4 class="font-semibold text-lg">Dr. Sarah Johnson</h4>
@@ -308,7 +269,7 @@
                     <p class="text-gray-600 text-sm">PhD in Plant Pathology with 15 years of experience in crop disease research.</p>
                 </div>
                 
-                <!-- Team Member 2 -->
+                Team Member 2
                 <div class="bg-gray-50 p-6 rounded-lg text-center">
                     <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80" alt="Team member" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
                     <h4 class="font-semibold text-lg">James Chen</h4>
@@ -316,7 +277,7 @@
                     <p class="text-gray-600 text-sm">Machine learning specialist focused on computer vision applications in agriculture.</p>
                 </div>
                 
-                <!-- Team Member 3 -->
+                Team Member 3
                 <div class="bg-gray-50 p-6 rounded-lg text-center">
                     <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Team member" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
                     <h4 class="font-semibold text-lg">Thomas Mokoena</h4>
@@ -324,18 +285,20 @@
                     <p class="text-gray-600 text-sm">Former commercial farmer with deep understanding of practical farming challenges.</p>
                 </div>
                 
-                <!-- Team Member 4 -->
+                Team Member 4
                 <div class="bg-gray-50 p-6 rounded-lg text-center">
                     <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Team member" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
                     <h4 class="font-semibold text-lg">Naledi Smith</h4>
                     <p class="text-green-600 mb-2">User Experience</p>
                     <p class="text-gray-600 text-sm">Designer focused on creating intuitive interfaces for farmers with varying tech skills.</p>
                 </div>
+                -->
             </div>
+            
         </div>
     </section>
 
-    <!-- Download App Section -->
+    <!-- ===== DOWNLOAD APP SECTION ===== -->
     <section class="py-16 bg-green-600 text-white">
         <div class="container mx-auto px-4 text-center">
             <h2 class="text-3xl font-bold mb-6">Download Our Mobile App</h2>
@@ -360,18 +323,21 @@
             
             <div class="mt-12 bg-white bg-opacity-10 rounded-lg p-6 max-w-3xl mx-auto">
                 <h3 class="text-xl font-semibold mb-4">Be the first to know when we launch!</h3>
-                <div class="flex flex-col sm:flex-row">
-                    <input type="email" placeholder="Enter your email address" class="flex-grow px-4 py-3 rounded-l-lg sm:rounded-r-none rounded-r-lg text-gray-800 focus:outline-none">
-                    <button class="bg-green-800 hover:bg-green-900 px-6 py-3 rounded-r-lg sm:rounded-l-none rounded-l-lg mt-2 sm:mt-0 transition duration-300 font-medium">
-                        Notify Me
-                    </button>
-                </div>
-                <p class="text-sm mt-2 text-white text-opacity-80">We'll only email you about the app launch, nothing else.</p>
+                <form id="notifyForm" action="https://formspree.io/f/mgvkdpqq" method="POST">
+                    <div class="flex flex-col sm:flex-row">
+                        <input type="email" name="email" placeholder="Enter your email address" class="flex-grow px-4 py-3 rounded-l-lg sm:rounded-r-none rounded-r-lg text-gray-800 focus:outline-none" required>
+                        <button type="submit" class="bg-green-800 hover:bg-green-900 px-6 py-3 rounded-r-lg sm:rounded-l-none rounded-l-lg mt-2 sm:mt-0 transition duration-300 font-medium">
+                            Notify Me
+                        </button>
+                    </div>
+                    <p class="text-sm mt-2 text-white text-opacity-80">We'll only email you about the app launch, nothing else.</p>
+                    <div id="notifyMessage" class="mt-4 text-center hidden"></div>
+                </form>
             </div>
         </div>
     </section>
 
-    <!-- Contact Us Section -->
+    <!-- ===== CONTACT SECTION ===== -->
     <section id="contact" class="py-16 bg-gray-50">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-center text-gray-800 mb-4">Contact Us</h2>
@@ -379,18 +345,18 @@
             
             <div class="flex flex-col lg:flex-row">
                 <div class="lg:w-1/2 mb-8 lg:mb-0 lg:pr-12">
-                    <form class="bg-white p-6 rounded-lg shadow-md">
+                    <form id="contactForm" action="https://formspree.io/f/mgvkdpqq" method="POST" class="bg-white p-6 rounded-lg shadow-md">
                         <div class="mb-4">
                             <label for="name" class="block text-gray-700 font-medium mb-2">Your Name</label>
-                            <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
+                            <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" required>
                         </div>
                         <div class="mb-4">
                             <label for="email" class="block text-gray-700 font-medium mb-2">Email Address</label>
-                            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
+                            <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" required>
                         </div>
                         <div class="mb-4">
                             <label for="subject" class="block text-gray-700 font-medium mb-2">Subject</label>
-                            <select id="subject" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
+                            <select id="subject" name="subject" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" required>
                                 <option value="">Select a topic</option>
                                 <option value="general">General Inquiry</option>
                                 <option value="technical">Technical Support</option>
@@ -400,12 +366,15 @@
                         </div>
                         <div class="mb-4">
                             <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
-                            <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"></textarea>
+                            <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" required></textarea>
                         </div>
+                        <!-- Anti-spam honeypot field (invisible to users) -->
+                        <input type="text" name="_gotcha" style="display:none">
                         <button type="submit" class="bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-6 rounded-lg transition duration-300 w-full">
                             Send Message
                         </button>
                     </form>
+                    <div id="contactMessage" class="mt-4 text-center hidden"></div>
                 </div>
                 
                 <div class="lg:w-1/2">
@@ -419,7 +388,7 @@
                                 </div>
                                 <div>
                                     <h4 class="font-medium text-lg mb-1">Email</h4>
-                                    <p class="text-gray-600">support@kropwise.co.za</p>
+                                    <p class="text-gray-600">support@kropwise.com</p>
                                 </div>
                             </div>
                             
@@ -429,7 +398,7 @@
                                 </div>
                                 <div>
                                     <h4 class="font-medium text-lg mb-1">Phone</h4>
-                                    <p class="text-gray-600">+27 12 345 6789</p>
+                                    <p class="text-gray-600">+27 68 510 0409</p>
                                     <p class="text-sm text-gray-500">Monday-Friday, 8am-5pm</p>
                                 </div>
                             </div>
@@ -440,15 +409,18 @@
                                 </div>
                                 <div>
                                     <h4 class="font-medium text-lg mb-1">Office</h4>
-                                    <p class="text-gray-600">123 AgriTech Park</p>
-                                    <p class="text-gray-600">Pretoria, South Africa</p>
+                                    <p class="text-gray-600">19 Ameshoff St, Braamfontein</p>
+                                    <p class="text-gray-600">Johannesburg, South Africa</p>
                                 </div>
                             </div>
                         </div>
                         
                         <h3 class="text-xl font-semibold mb-4">Follow Us</h3>
                         <div class="flex space-x-4">
-                            <a href="#" class="bg-gray-100 hover:bg-gray-200 w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
+                            <a href="https://www.linkedin.com/company/kropwise/" class="bg-gray-100 hover:bg-gray-200 w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
+                                <i class="fab fa-linkedin-in text-gray-700"></i>
+                            </a>
+                            <a href="https://www.facebook.com/profile.php?id=61575681434690" class="bg-gray-100 hover:bg-gray-200 w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
                                 <i class="fab fa-facebook-f text-gray-700"></i>
                             </a>
                             <a href="#" class="bg-gray-100 hover:bg-gray-200 w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
@@ -457,9 +429,7 @@
                             <a href="#" class="bg-gray-100 hover:bg-gray-200 w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
                                 <i class="fab fa-instagram text-gray-700"></i>
                             </a>
-                            <a href="#" class="bg-gray-100 hover:bg-gray-200 w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
-                                <i class="fab fa-linkedin-in text-gray-700"></i>
-                            </a>
+                            
                         </div>
                     </div>
                 </div>
@@ -467,7 +437,7 @@
         </div>
     </section>
 
-    <!-- FAQ Section -->
+    <!-- ===== FAQ SECTION ===== -->
     <section class="py-16 bg-white">
         <div class="container mx-auto px-4 max-w-4xl">
             <h2 class="text-3xl font-bold text-center text-gray-800 mb-4">Frequently Asked Questions</h2>
@@ -492,7 +462,7 @@
                         <i class="fas fa-chevron-down transition-transform duration-300"></i>
                     </button>
                     <div class="faq-content hidden p-4 border-t border-gray-200">
-                        <p class="text-gray-600">Basic crop analysis is completely free. We may introduce premium features in the future, but core disease detection and recommendations will always remain free to ensure accessibility for all farmers.</p>
+                        <p class="text-gray-600">Every user who signs up gets 10 free scans. After that we have a pay-per-scan model. and a subscription model with a basic, standard and premium plan.</p>
                     </div>
                 </div>
                 
@@ -503,7 +473,7 @@
                         <i class="fas fa-chevron-down transition-transform duration-300"></i>
                     </button>
                     <div class="faq-content hidden p-4 border-t border-gray-200">
-                        <p class="text-gray-600">We currently support major crops including maize, wheat, soybeans, potatoes, tomatoes, citrus fruits, and grapes. We're constantly adding new crops based on farmer demand and regional importance.</p>
+                        <p class="text-gray-600">We currently support a wide range of crops including maize, wheat, soybeans, potatoes, tomatoes, citrus fruits, grapes, and more. We're constantly adding new crops based on farmer demand and regional importance.</p>
                     </div>
                 </div>
                 
@@ -525,14 +495,14 @@
                         <i class="fas fa-chevron-down transition-transform duration-300"></i>
                     </button>
                     <div class="faq-content hidden p-4 border-t border-gray-200">
-                        <p class="text-gray-600">Currently, you need an internet connection to upload and analyze photos. However, we're developing offline functionality that will allow basic features to work without connectivity, scheduled for release in our next major update.</p>
+                        <p class="text-gray-600">Currently, you need an internet connection to upload and analyze photos. However, we do have an offline functionality for past scans.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- ===== FOOTER ===== -->
     <footer class="bg-gray-800 text-white py-12">
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -543,7 +513,10 @@
                     </div>
                     <p class="text-gray-400 mb-4">Empowering farmers with AI-driven crop analysis and smart farming solutions.</p>
                     <div class="flex space-x-4">
-                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                        <a href="https://www.linkedin.com/company/kropwise/" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://www.facebook.com/profile.php?id=61575681434690" class="text-gray-400 hover:text-white transition duration-300">
                             <i class="fab fa-facebook-f"></i>
                         </a>
                         <a href="#" class="text-gray-400 hover:text-white transition duration-300">
@@ -552,9 +525,7 @@
                         <a href="#" class="text-gray-400 hover:text-white transition duration-300">
                             <i class="fab fa-instagram"></i>
                         </a>
-                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
+                        
                     </div>
                 </div>
                 
@@ -593,52 +564,11 @@
             </div>
             
             <div class="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400">
-                <p>&copy; 2023 KropWise. All rights reserved.</p>
+                <p>&copy; 2025 KropWise. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <script>
-        // Mobile menu toggle
-        document.getElementById('menu-toggle').addEventListener('click', function() {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
-        });
-
-        // FAQ toggle functionality
-        document.querySelectorAll('.faq-toggle').forEach(button => {
-            button.addEventListener('click', () => {
-                const content = button.nextElementSibling;
-                const icon = button.querySelector('i');
-                
-                content.classList.toggle('hidden');
-                icon.classList.toggle('transform');
-                icon.classList.toggle('rotate-180');
-            });
-        });
-
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                    
-                    // Close mobile menu if open
-                    const mobileMenu = document.getElementById('mobile-menu');
-                    if (!mobileMenu.classList.contains('hidden')) {
-                        mobileMenu.classList.add('hidden');
-                    }
-                }
-            });
-        });
-    </script>
+    <script src="js/main.js"></script>
 </body>
 </html>
