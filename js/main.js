@@ -45,4 +45,90 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+});
+
+// Function to show messages
+function showMessage(elementId, message, isSuccess) {
+    const messageDiv = document.getElementById(elementId);
+    messageDiv.textContent = message;
+    messageDiv.classList.remove('hidden');
+    messageDiv.classList.remove('text-red-600', 'text-green-600');
+    messageDiv.classList.add(isSuccess ? 'text-green-600' : 'text-red-600');
+    
+    // Hide message after 5 seconds
+    setTimeout(() => {
+        messageDiv.classList.add('hidden');
+    }, 5000);
+}
+
+// Handle notify form submission
+document.getElementById('notifyForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const form = this;
+    const submitButton = form.querySelector('button[type="submit"]');
+    const originalButtonText = submitButton.innerHTML;
+    
+    // Disable button and show loading state
+    submitButton.disabled = true;
+    submitButton.innerHTML = 'Sending...';
+
+    fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: {
+            'Accept': 'application/json'
+        }
+    })
+    .then(response => {
+        if (response.ok) {
+            showMessage('notifyMessage', 'Thank you! We\'ll notify you when we launch.', true);
+            form.reset();
+        } else {
+            showMessage('notifyMessage', 'Oops! Something went wrong. Please try again.', false);
+        }
+    })
+    .catch(error => {
+        showMessage('notifyMessage', 'Oops! Something went wrong. Please try again.', false);
+    })
+    .finally(() => {
+        // Re-enable button and restore original text
+        submitButton.disabled = false;
+        submitButton.innerHTML = originalButtonText;
+    });
+});
+
+// Handle contact form submission
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const form = this;
+    const submitButton = form.querySelector('button[type="submit"]');
+    const originalButtonText = submitButton.innerHTML;
+    
+    // Disable button and show loading state
+    submitButton.disabled = true;
+    submitButton.innerHTML = 'Sending...';
+
+    fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: {
+            'Accept': 'application/json'
+        }
+    })
+    .then(response => {
+        if (response.ok) {
+            showMessage('contactMessage', 'Thank you for your message! We\'ll get back to you soon.', true);
+            form.reset();
+        } else {
+            showMessage('contactMessage', 'Oops! Something went wrong. Please try again.', false);
+        }
+    })
+    .catch(error => {
+        showMessage('contactMessage', 'Oops! Something went wrong. Please try again.', false);
+    })
+    .finally(() => {
+        // Re-enable button and restore original text
+        submitButton.disabled = false;
+        submitButton.innerHTML = originalButtonText;
+    });
 }); 
